@@ -1,5 +1,5 @@
 class Admin::DashboardController < ApplicationController
-
+   # Basic Authentication using environment variables
   http_basic_authenticate_with name: ENV["ADMIN_USERNAME"], password: ENV["ADMIN_PASSWORD"]
 
 
