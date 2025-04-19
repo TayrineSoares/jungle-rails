@@ -1,8 +1,12 @@
-
 <div class="container mt-5">
-  <h1>Admin Dashboard</h1>
-  <p>Welcome to the admin dashboard!</p>
+  <h1 class="text-center mb-4">Admin Dashboard</h1>
 
+  <div class="alert alert-info mb-3">
+    <p>There are <strong><%= @product_count %></strong> products in the database.</p>
+    <%= link_to 'View All Products', admin_products_path, class: 'btn btn-primary' %>
+  </div>
 
-  <p>There are <strong><%= @product_count %></strong> products in the database.</p>
-  <p>There are <strong><%= @category_count %></strong> categories in the database.</p>
+  <div class="alert alert-success">
+    <p>There are <strong><%= @category_count %></strong> categories in the database.</p>
+  </div>
+</div>
