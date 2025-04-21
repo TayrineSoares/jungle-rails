@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
     # Add route for categories under admin
     resources :categories, except: [:edit, :update, :show]
+    
   end
 
   # Add route for About page
