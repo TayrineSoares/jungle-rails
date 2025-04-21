@@ -16,7 +16,10 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
+    # Add route for categories under admin
+    resources :categories, except: [:edit, :update, :show]
   end
+
 
   # Add route for About page
   get '/about', to: 'about#show'
