@@ -8,14 +8,23 @@
   <div class="well">
     <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
   </div>
+  <br>
 
   <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Categories</th>
-        </tr>
-      </thead>
-  </table>
+  <thead>
+    <tr>
+      <th>Category Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @categories.each do |category| %>
+    <tr>
+      <td>
+        <%= link_to category.name, category_path(category), class: 'btn btn-link' %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
 
 </section>
-
